@@ -6,6 +6,7 @@ const Navbar = () => {
     <div className="container">
       <div className="navbar-top">
         <div className="right-contents">
+            <img src="logo.png" alt="logo"/>
             <h5 className="heading">Hacker News</h5>
           <ul>
             <li>New</li>
