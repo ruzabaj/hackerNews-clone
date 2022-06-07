@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter as Router } from "react-router-dom";
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 // import New from './components/Contents/New';
@@ -14,12 +14,14 @@ import './scss/login.scss'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <Navbar/>
-    {/* <Login/> */}
-    {/* <Reset/> */}
-    {/* <New/> */}
-    <Footer/>
+    <Router>
+      <App />
+      <Navbar/>
+      {/* <Login/> */}
+      {/* <Reset/> */}
+      {/* <New/> */}
+      <Footer/>
+    </Router>
   </React.StrictMode>
 );
 

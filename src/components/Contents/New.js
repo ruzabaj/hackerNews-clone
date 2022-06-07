@@ -3,7 +3,7 @@ import '../../scss/contents.scss';
 
 const New = () => {
   return (
-    <div className="container">
+    <div className="new-posts">
       <div className="contents">
         <table>
           <tr>
@@ -15,7 +15,7 @@ const New = () => {
           <tr>
             <p>Whatever</p>
           </tr>
-          <tr>
+          {/* <tr>
             <p>
               {" "}
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -74,7 +74,7 @@ const New = () => {
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
             </p>
-          </tr>
+          </tr> */}
         </table>
       </div>
     </div>

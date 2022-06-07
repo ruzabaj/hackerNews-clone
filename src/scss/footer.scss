@@ -1,15 +1,13 @@
 @import './config';
 
-#container-footer{
-    border-top: 3px solid orange;
+.footer-handle{
+    background-color: $background-secondary;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: $background-secondary;
-   
+    // justify-content: center;
+    border-top: 3px solid orange;
 }
-
 .footer ul{
     display: flex;
     list-style: none;

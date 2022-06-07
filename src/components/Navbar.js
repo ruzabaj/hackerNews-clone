@@ -1,20 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../scss/navbar.scss";
+import Routes from '../router/Routes'
 
 const Navbar = () => {
   return (
-    <div className="container">
+    <div className="container" id="with-links">
       <div className="navbar-top">
         <div className="right-contents">
             <img src="logo.png" alt="logo"/>
             <h5 className="heading">Hacker News</h5>
           <ul>
-            <li>New</li>
-            <li>Post</li>
-            <li>Comment</li>
-            <li>Ask</li>
-            <li>Show</li>
-            <li>Jobs</li>
+            <li><Link to="/">New</Link></li>
+            <li><Link to="/post">Post </Link></li>
+            <li><Link to="/comment">Comment </Link></li>
+            <li><Link to="/ask">Ask </Link></li>
+            <li><Link to="/show">Show</Link></li>
+            <li><Link to="/jobs">Jobs </Link></li>
           </ul>
         </div>
         <div>
@@ -26,6 +28,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+          <Routes/>
       
     </div>
   );

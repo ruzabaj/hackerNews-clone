@@ -4,6 +4,8 @@ import "../scss/footer.scss";
 const Footer = () => {
   return (
     <div  className="container" id="container-footer">
+        <div className="footer-handle">
+
       <div className="footer">
         <ul>
           <li>Guidelines</li>
@@ -20,6 +22,7 @@ const Footer = () => {
           <label to="search">Search:</label>
           <input type="text"/>
       </div>
+        </div>
     </div>
   );
 };
