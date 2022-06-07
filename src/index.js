@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
 
-import Login from './components/Login'
+// import Login from './components/Login'
+// import Reset  from './components/Reset/index'
+
 import './scss/login.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Login/>
+    {/* <Login/> */}
+    {/* <Reset/> */}
+    <Navbar/>
   </React.StrictMode>
 );
 

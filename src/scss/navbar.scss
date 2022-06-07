@@ -1,0 +1,19 @@
+@import "./config";
+
+.navbar-top {
+  background-color: $navbar-button-color;
+  color: $primary-color;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-top ul {
+  display: flex;
+  list-style: none;
+  margin: 5px;
+  padding: 10px;
+}
+.contents{
+    background-color: $background-secondary;
+}
