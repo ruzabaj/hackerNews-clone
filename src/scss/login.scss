@@ -1,51 +1,52 @@
-@import './config';
-.bg-img{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+@import "./config";
+.bg-img {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 .containers {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
-    background: $background-color;
-    height: auto;
-    width: 500px;
-    margin: 10px;
-    padding: 10px 05px;
-    font-family: $font-family2;
+  background: $background-color;
+  height: 400px;
+  width: 500px;
+  margin: 10px;
+  padding: 10px 05px;
+  font-family: $font-family2;
 
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(234, 117, 34, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px $box-shadow-container;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid $border-container;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   }
-   input[type=text],
-   input[type=password]{
-       width: 200px;
-       height: 30px;
-       border: 0;
-       outline: none;
-       border-radius: 05px;
-       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-   }
-   .btn-login{
-       width: 100px;
-       height: 40px;
-       border-radius: 10px;
-       text-align: center;
-       color: white;
-       background-color: $navbar-button-color;
-       border: 0;
-   }
-   a{
-       text-decoration: none;
-   }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  height: 30px;
+  margin-left: 5px;
+  border: 0;
+  outline: none;
+  border-radius: 05px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.btn-login {
+  width: auto;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  background-color: $navbar-button-color;
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
