@@ -28,6 +28,15 @@
     justify-content: center;
     align-items: center;
    }
+   input[type=text],
+   input[type=password]{
+       width: 200px;
+       height: 30px;
+       border: 0;
+       outline: none;
+       border-radius: 05px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   }
    .btn-login{
        width: 100px;
        height: 40px;
@@ -36,4 +45,7 @@
        color: white;
        background-color: $navbar-button-color;
        border: 0;
+   }
+   a{
+       text-decoration: none;
    }
