@@ -15,7 +15,7 @@ const Register = () => {
                     <label to="username">Password:</label>
                     <input type="password"/> 
                 </p>
-                <button type='submit' className='btn-login'>Create account</button>
+                <button type='submit' className='btn-register'>Create account</button>
             </form>
         </div>
     </div>

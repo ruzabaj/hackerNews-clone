@@ -39,6 +39,15 @@ input[type="password"] {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .btn-login {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  background-color: $navbar-button-color;
+  border: 0;
+}
+.btn-register {
   width: auto;
   height: 40px;
   border-radius: 10px;
