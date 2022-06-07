@@ -1,4 +1,4 @@
-var posts=[
+var newData=[
     {"id":1, "title":"	52-year-old early retiree left the U.S. for Portugal with his family", "link":"cnbc.com" },
     {"id":2, "title":"Differentiable Finite State Machines ", "link":"cnbc.com" },
     {"id":3, "title":"	ow we fixed connection reset errors on Gov.uk Pay", "link":"cnbc.com" },
@@ -107,3 +107,4 @@ var posts=[
     {"id":1, "title":"	52-year-old early retiree left the U.S. for Portugal with his family", "link":"cnbc.com" },
     {"id":1, "title":"	52-year-old early retiree left the U.S. for Portugal with his family", "link":"cnbc.com" },
 ]
+export default newData
