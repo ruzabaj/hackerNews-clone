@@ -1,0 +1,21 @@
+@import './config';
+
+#container-footer{
+    border-top: 3px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-secondary;
+   
+}
+
+.footer ul{
+    display: flex;
+    list-style: none;
+}
+.footer ul li{
+    padding: 05px;
+    margin: 5px;
+    border-left: 1px solid black;
+}

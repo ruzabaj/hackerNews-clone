@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
 
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+// import New from './components/Contents/New';
 // import Login from './components/Login'
 // import Reset  from './components/Reset/index'
 
@@ -13,9 +15,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <Navbar/>
     {/* <Login/> */}
     {/* <Reset/> */}
-    <Navbar/>
+    {/* <New/> */}
+    <Footer/>
   </React.StrictMode>
 );
 

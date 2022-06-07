@@ -1,0 +1,11 @@
+@import './config';
+
+.contents{
+    background-color: $background-secondary;
+}
+tr p{
+    width: 1300px;
+    height: auto;
+    border-bottom: 1px solid $border-bottom;
+    padding: 10px 15px;
+}

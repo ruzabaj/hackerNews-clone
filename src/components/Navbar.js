@@ -25,9 +25,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <div className="contents">
-        <p>whatever</p>
-      </div>
+      
     </div>
   );
 };
