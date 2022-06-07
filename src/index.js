@@ -4,6 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import Login from './components/Login'
+import './scss/login.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
