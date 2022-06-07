@@ -7,16 +7,18 @@ const Login = () => {
         <img src='bg-hackerNews.jpg' alt='hackerNews' className='bg-img'/>
         <div className='containers'>
             <form>
-                <label to="username">Username:</label>
-                <input type="text"/>
-                <div>
+                <p>
+                    <label to="username">Username:</label>
+                    <input type="text"/>
+                </p>
+                <p>
                     <label to="username">Password:</label>
                     <input type="password"/> 
-                </div>
+                </p>
                 <button type='submit' className='btn-login'>Login</button>
-                <div>
+                <p>
                     <a href='forgot'>Forgot password?</a>
-                </div>
+                </p>
             </form>
         </div>
     </div>
