@@ -1,6 +1,6 @@
 import {Route, Routes} from 'react-router-dom';
 import New from '../components/Contents/New';
-import Post from '../components/Contents/Post';
+import Post from '../components/Contents/Past';
 import Comment from '../components/Contents/Comment';
 import Ask from '../components/Contents/Ask';
 import Show from '../components/Contents/Show';
@@ -12,7 +12,7 @@ const Router = () => {
     <div>
         <Routes>
             <Route exact path='/' element={<New/>}></Route>
-            <Route  path='/post' element={<Post/>}></Route>
+            <Route  path='/past' element={<Post/>}></Route>
             <Route  path='/comment' element={<Comment/>}></Route>
             <Route path='/ask' element={<Ask/>}></Route>
             <Route  path='/show' element={<Show/>}></Route>

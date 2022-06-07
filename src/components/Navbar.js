@@ -12,7 +12,7 @@ const Navbar = () => {
             <h5 className="heading">Hacker News</h5>
           <ul>
             <li><Link to="/">New</Link></li>
-            <li><Link to="/post">Post </Link></li>
+            <li><Link to="/past">Past </Link></li>
             <li><Link to="/comment">Comment </Link></li>
             <li><Link to="/ask">Ask </Link></li>
             <li><Link to="/show">Show</Link></li>
