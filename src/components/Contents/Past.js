@@ -1,8 +1,15 @@
 import React from 'react'
+import '../../scss/contents.scss';
 
 const Past = () => {
   return (
-    <div>Past</div>
+    <div>
+      <div className="new-posts">
+    <div className="contents">
+      Past
+      </div>
+      </div>
+    </div>
   )
 }
 

@@ -1,8 +1,13 @@
 import React from 'react'
+import '../../scss/contents.scss';
 
 const Job = () => {
   return (
-    <div>Job</div>
+    <div className="new-posts">
+    <div className="contents">
+      Job
+      </div>
+      </div>
   )
 }
 

@@ -1,8 +1,13 @@
 import React from 'react'
+import '../../scss/contents.scss';
 
 const Comment = () => {
   return (
-    <div>Comment</div>
+    <div className="new-posts">
+    <div className="contents">
+      Comment
+      </div>
+      </div>
   )
 }
 

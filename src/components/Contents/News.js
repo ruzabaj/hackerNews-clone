@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../scss/contents.scss';
 
 const news = () => {
   return (
