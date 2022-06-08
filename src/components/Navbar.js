@@ -24,7 +24,7 @@ const Navbar = () => {
             Submit
           </button>
           <button type="submit" className="btn-login">
-            Login
+            <Link to="/login">Login </Link>
           </button>
         </div>
       </div>

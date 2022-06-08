@@ -5,6 +5,9 @@ import Comment from '../components/Contents/Comment';
 import Ask from '../components/Contents/Ask';
 import Show from '../components/Contents/Show';
 import Jobs from '../components/Contents/Job';
+import Login from '../components/Login/index';
+import Reset from '../components/Reset/index';
+import Register from '../components/Register/index';
 import React from 'react'
 
 const Router = () => {
@@ -17,6 +20,9 @@ const Router = () => {
             <Route path='/ask' element={<Ask/>}></Route>
             <Route  path='/show' element={<Show/>}></Route>
             <Route  path='/jobs' element={<Jobs/>}></Route>
+            <Route  path='/login' element={<Login/>}></Route>
+            <Route  path='/reset' element={<Reset/>}></Route>
+            <Route  path='/register' element={<Register/>}></Route>
         </Routes>
     </div>
   )

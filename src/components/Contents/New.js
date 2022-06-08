@@ -6,6 +6,7 @@ import axios from "axios";
 
 const New = () => {
 const [data, setdata] = useState("");
+const column=data[0] && Object.keys(data[0]);
 
 useEffect (() => {
   return () => {
@@ -18,23 +19,25 @@ useEffect (() => {
 }, [])
   return (
     <div className="new-posts">
-      {/* {newData.map((item)=>( */}
-
+        {console.log(column)}
         <div className="contents">
         <table>
           <tbody>
-
+        {/* {data.map((row)=>(
           <tr>
-            <p>{data}</p>
+            {column.map((column)=> <th>{row[column]}</th>)}
+          </tr>
+        ))}  */}
+          <tr>
+          <th>Hello</th>
           </tr>
           <tr>
-            <p>Hello</p>
+          <td>{data}
+            <span><a href="link">Link here</a></span>
+          </td>
           </tr>
           <tr>
-            <div>Whatever</div>
-          </tr>
-          {/* <tr>
-            <p>
+            <th>
             {" "}
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -46,10 +49,10 @@ useEffect (() => {
             containing Lorem Ipsum passages, and more recently with desktop
             publishing software like Aldus PageMaker including versions of
             Lorem Ipsum.
-            </p>
+            </th>
             </tr>
             <tr>
-            <p>
+            <th>
             {" "}
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -61,10 +64,10 @@ useEffect (() => {
               containing Lorem Ipsum passages, and more recently with desktop
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
-              </p>
+              </th>
               </tr>
               <tr>
-              <p>
+              <th>
               {" "}
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -76,10 +79,10 @@ useEffect (() => {
               containing Lorem Ipsum passages, and more recently with desktop
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
-              </p>
+              </th>
               </tr>
               <tr>
-              <p>
+              <th>
               {" "}
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -91,12 +94,11 @@ useEffect (() => {
               containing Lorem Ipsum passages, and more recently with desktop
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
-              </p>
-            </tr> */}
+              </th>
+            </tr> 
               </tbody>
         </table>
       </div>
-            {/* ))} */}
     </div>
   );
 };

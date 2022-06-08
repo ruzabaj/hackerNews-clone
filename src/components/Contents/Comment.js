@@ -14,6 +14,7 @@ const Comment = () => {
         setComment(response.data[0].name);
       });
   }, []);
+  
   return (
     <div className="new-posts">
       {/* {Comment.map((item) => ( */}
