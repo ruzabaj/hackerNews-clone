@@ -1,21 +1,34 @@
-/* eslint-disable no-template-curly-in-string */
 import axios from "axios";
+export const baseUrl =`https://hacker-news.firebaseio.com/v0/`;
+export const storysUrl =`${baseUrl}item/`;
+export const newStoriesUrl =`${baseUrl}newstories.json`;
+export const bestStoriesUrl =`${baseUrl}beststories.json`;
+export const topStoriesUrl =`${baseUrl}topstories.json`;
 
-export const baseUrl ="https://hacker-news.firebaseio.com/v0/";
-export const newStoriesUrl ="https://hacker-news.firebaseio.com/v0/newstories.json";
-// '${baseUrl}newstories.json/' '${baseUrl}item/'
-export const storysUrl ="https://hacker-news.firebaseio.com/v0/item/";
-
-export const getStory =async dataApi=>{
-    const result= await axios.get("https://hacker-news.firebaseio.com/v0/item/31679398.json")
-    // ("${baseUrl+dataApi}.json")
-    .then(({data})=>data);
-
+export const getNewStory =async id=>{
+    const result= await axios.get(`${storysUrl+id}.json`)
     return result
 }
-export const getStoryIds = async () => {
+export const getNewStories = async () => {
     const result = await axios.get(newStoriesUrl)
-    .then(({data})=>data);
+    return result;
+}
 
+export const getBestStory =async id=>{
+    const result=await axios.get(`${storysUrl+id}`.json)
+    return result
+}
+export const getBestStories=async () =>{
+    const result= await axios.get(bestStoriesUrl)
+    return result
+}
+
+export const getTopStory= async id=>{
+    const result =await axios.get(`${storysUrl+id}`.json)
+    return result;
+}
+
+export const getTopStories=async() =>{
+    const result = await axios.get(`${topStoriesUrl}`)    
     return result;
 }

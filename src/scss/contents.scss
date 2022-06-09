@@ -6,6 +6,7 @@
 }
 .new-posts{
     width: 100%;
+    height: auto;
 }
 .content-one{
     display: flex;
@@ -14,6 +15,8 @@
 .content-two{
     display: flex;
     margin-top: -20px !important;
+    padding: 10px;
+    margin: 5px;
 }
 .content-two a{
     color: $tertiary-color !important;
