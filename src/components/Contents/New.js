@@ -1,103 +1,41 @@
 import React from "react";
 import '../../scss/contents.scss';
-// import newData from "../../StaticFiles/data";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const New = () => {
-const [data, setdata] = useState("");
-const column=data[0] && Object.keys(data[0]);
+const [dataApi, setdataApi] = useState([]);
 
 useEffect (() => {
   return () => {
-    axios.get("https://jsonplaceholder.typicode.com/posts")
+    axios.get("https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty")
     .then((response)=>{
-      console.log(response.data[0].title);
-      setdata(response.data[1].title)
+      console.log(response.data);
+      setdataApi(response.data)
     })
   };
 }, [])
+// useEffect (()=>{
+//   axios.get("https://hacker-news.firebaseio.com/v0/item/31678336(i).json?print=pretty")
+//   .then((response)=>{
+//     console.log(response.data)
+//   })
+// })
   return (
     <div className="new-posts">
-        {console.log(column)}
+      {/* {console.log( dataApi)}
+      {console.log( "dataApi called")} */}
         <div className="contents">
-        <table>
-          <tbody>
-        {/* {data.map((row)=>(
-          <tr>
-            {column.map((column)=> <th>{row[column]}</th>)}
-          </tr>
-        ))}  */}
-          <tr>
-          <th>Hello</th>
-          </tr>
-          <tr>
-          <td>{data}
-            <span><a href="link">Link here</a></span>
-          </td>
-          </tr>
-          <tr>
-            <th>
-            {" "}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of
-            Lorem Ipsum.
-            </th>
-            </tr>
-            <tr>
-            <th>
-            {" "}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-              </th>
-              </tr>
-              <tr>
-              <th>
-              {" "}
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-              </th>
-              </tr>
-              <tr>
-              <th>
-              {" "}
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-              </th>
-            </tr> 
-              </tbody>
-        </table>
+          <div className="content-one">
+            {dataApi.map((i)=>(<p>{console.log(i)}</p>))}
+            {/* <p>{data.title}</p>
+            <p>({data.url})</p> */}
+          </div>
+          <div className="content-two">
+            {/* <a href="title">1 point by {data.title}</a>
+            <a href="url">(time{data.url})</a> */}
+            <a href="comment">(comment if it has child)</a>
+          </div>
       </div>
     </div>
   );

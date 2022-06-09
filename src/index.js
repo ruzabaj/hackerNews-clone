@@ -5,11 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-// import New from './components/Contents/New';
-// import Login from './components/Login'
-// import Reset  from './components/Reset/index'
-
-import './scss/login.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,9 +12,6 @@ root.render(
     <Router>
       <App />
       <Navbar/>
-      {/* <Login/> */}
-      {/* <Reset/> */}
-      {/* <New/> */}
       <Footer/>
     </Router>
   </React.StrictMode>

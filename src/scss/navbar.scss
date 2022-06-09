@@ -29,4 +29,10 @@ h5{
 .navbar-top ul li{
   padding: 10px;
 }
+.button-nav button{
+  background-color:$navbar-button-color;
+  border: 0;
+  margin-top: 10px;
+  color:$primary-color;
+}
 

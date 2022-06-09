@@ -2,7 +2,7 @@ import React from 'react'
 
 const Reset = () => {
   return (
-    <div>
+    <div className='container'>
         <img src='bg-hackerNews.jpg' alt='hackerNews' className='bg-img'/>
         <div className='containers'>
             <form>

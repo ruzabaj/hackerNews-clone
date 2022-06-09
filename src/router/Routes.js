@@ -1,5 +1,7 @@
 import {Route, Routes} from 'react-router-dom';
 import New from '../components/Contents/New';
+import Top from '../components/Contents/Top';
+import Best from '../components/Contents/Best';
 import Post from '../components/Contents/Past';
 import Comment from '../components/Contents/Comment';
 import Ask from '../components/Contents/Ask';
@@ -15,6 +17,8 @@ const Router = () => {
     <div>
         <Routes>
             <Route exact path='/' element={<New/>}></Route>
+            <Route exact path='/top' element={<Top/>}></Route>
+            <Route exact path='/best' element={<Best/>}></Route>
             <Route  path='/past' element={<Post/>}></Route>
             <Route  path='/comment' element={<Comment/>}></Route>
             <Route path='/ask' element={<Ask/>}></Route>

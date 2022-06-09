@@ -12,6 +12,8 @@ const Navbar = () => {
             <h5 className="heading">Hacker News</h5>
           <ul>
             <li><Link to="/">New</Link></li>
+            <li><Link to="/top">Top</Link></li>
+            <li><Link to="/best">Best</Link></li>
             <li><Link to="/past">Past </Link></li>
             <li><Link to="/comment">Comment </Link></li>
             <li><Link to="/ask">Ask </Link></li>
@@ -19,7 +21,7 @@ const Navbar = () => {
             <li><Link to="/jobs">Jobs </Link></li>
           </ul>
         </div>
-        <div>
+        <div className="button-nav">
           <button type="submit" className="btn-submit">
             Submit
           </button>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Register = () => {
   return (
-    <div>
+    <div className='container'>
         <img src='bg-hackerNews.jpg' alt='hackerNews' className='bg-img'/>
         <div className='containers'>
             <form>
