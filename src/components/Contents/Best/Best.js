@@ -15,6 +15,8 @@ const getBest=async()=>{
   try{
     const response=await getBestStories();
     setBestStories(response.data.slice(0,30))
+    console.log("from best")
+    console.log(response.data)
   }
   catch(error){
     console.log(error);
@@ -24,7 +26,7 @@ const getBest=async()=>{
     <div className="new-posts">
         <div className="contents">
             {bestStories.map((i,index)=>
-              (<BestNews props={i}/>)
+              (<BestNews id={i} counter={index+1}/>)
             )}
       </div>
     </div>

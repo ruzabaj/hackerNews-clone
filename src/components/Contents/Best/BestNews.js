@@ -3,8 +3,9 @@ import "../../../scss/contents.scss";
 import {getBestStory} from '../../../axios/axios'
 import { useState, useEffect } from 'react';
 
-const BestNews = ({id, sno}) => {
-const [bestStory, setBestStory]= useState({})
+const BestNews = ({id, counter}) => {
+const [bestStory, setBestStory]= useState({});
+const [children, setChildren]=useState([]);
 
 useEffect(() => {
   getBestNews()  
@@ -14,6 +15,9 @@ const getBestNews= async()=>{
   try {
     const response= await getBestStory(id);
     setBestStory(response.data)
+    console.log("From Best News")
+    console.log(response.data.kids)
+    setChildren(response.data.kids)
   } catch (error) {
     console.log(error)
   }}
@@ -22,7 +26,7 @@ const getBestNews= async()=>{
     <div className="new-posts">
       <div className="contents">
         <div className="content-one">
-          <p>{sno}</p>
+          <p>{counter}</p>
           <p> {JSON.stringify(bestStory.title)}</p>
           <p>( {JSON.stringify(bestStory.url)})</p>
         </div>
@@ -32,6 +36,7 @@ const getBestNews= async()=>{
             <a href="author">{JSON.stringify(bestStory.by)}</a>
           </span>
           <a href="time">{JSON.stringify(bestStory.time)}hours ago</a>
+          <a href="children">{JSON.stringify(children)}</a>
         </div>
       </div>
     </div>

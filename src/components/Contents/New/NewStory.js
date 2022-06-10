@@ -5,6 +5,7 @@ import { getNewStory} from "../../../axios/axios";
 
 const Story = ({ id ,sno}) => {
   const [newStory, setNewStory] = useState({});
+  const [descendant, setDescendants] = useState();
 
   useEffect(() => {
     getStoryNew();
@@ -14,6 +15,9 @@ const Story = ({ id ,sno}) => {
     try {
       const response=await getNewStory(id);
       setNewStory(response.data)
+      console.log("from newStory after replaing id js")
+      console.log(response.data.descendants)
+      setDescendants(response.data.descendants)
     } catch (error) {
       console.log(error);
     }
@@ -32,6 +36,7 @@ const Story = ({ id ,sno}) => {
             <a href="author">{JSON.stringify(newStory.by)}</a>
           </span>
           <a href="time">{JSON.stringify(newStory.time)}hours ago</a>
+          <a href="descendants">{JSON.stringify(descendant)}</a>       
         </div>
       </div>
     </div>

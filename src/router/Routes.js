@@ -1,6 +1,6 @@
 import {Route, Routes} from 'react-router-dom';
 import New from '../components/Contents/New/New';
-import Top from '../components/Contents/New/NewStory';
+import Top from '../components/Contents/Top/Top';
 import Best from '../components/Contents/Best/Best';
 import Post from '../components/Contents/Past';
 import Comment from '../components/Contents/Comment';

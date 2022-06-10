@@ -1,34 +1,35 @@
 import React from 'react'
 import '../../../scss/contents.scss';
 import { useState, useEffect } from "react";
-import {getTopStories} from '../../../axios/axios'
-import TopStory from './TopStory'
+import {getTopStories} from '../../../axios/axios';
+import Story from './TopStory'
 
 const Top = () => {
 const[topStory, setTopStory]= useState([]);
 
 useEffect(()=>{
-    getTop();
+    getTopStory();
 },[]);
 
-const getTop=async()=>{
+const getTopStory = async () => {
 try {
     const response=await getTopStories();
-    setTopStory(response.data.slice(0,30))
+    setTopStory(response.data)
+    console.log("from top js")
 } 
 catch (error) {
     console.log(error)
 }
-}
+};
   return (
     <div className="new-posts">
         <div className="contents">
             {topStory.map((i,index)=>(
-            <TopStory id={i} sno={index}/>
+            <Story id={i} sno={index+1}/>
             ))}
         </div>
     </div>
   )
 }
 
-export default Top
+export default Top;

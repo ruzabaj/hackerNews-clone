@@ -15,6 +15,8 @@ const New = () => {
     try {
       const response=await getNewStories();
       setNewStories(response.data.slice(0,20))
+      console.log("from new js")
+      console.log(response.data)
     } catch (error) {
       console.log(error);
     }
