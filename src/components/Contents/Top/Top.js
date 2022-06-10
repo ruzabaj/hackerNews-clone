@@ -14,7 +14,7 @@ useEffect(()=>{
 const getTop=async()=>{
 try {
     const response=await getTopStories();
-    setTopStory(response.data.slice(0,50))
+    setTopStory(response.data.slice(0,30))
 } 
 catch (error) {
     console.log(error)

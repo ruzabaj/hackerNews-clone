@@ -22,7 +22,6 @@ const Story = ({ id ,sno}) => {
     <div className="new-posts">
       <div className="contents">
         <div className="content-one">
-
           <p>{sno}</p>
           <p> {JSON.stringify(newStory.title)}</p>
           <p>( {JSON.stringify(newStory.url)})</p>
