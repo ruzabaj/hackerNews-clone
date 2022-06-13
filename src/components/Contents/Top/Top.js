@@ -15,7 +15,6 @@ const getTopStory = async () => {
 try {
     const response=await getTopStories();
     setTopStory(response.data)
-    console.log("from top js")
 } 
 catch (error) {
     console.log(error)

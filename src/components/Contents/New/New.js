@@ -14,9 +14,7 @@ const New = () => {
   const getStoriesNew = async () => {
     try {
       const response=await getNewStories();
-      setNewStories(response.data.slice(0,20))
-      console.log("from new js")
-      console.log(response.data)
+      setNewStories(response.data.slice(0,30))
     } catch (error) {
       console.log(error);
     }

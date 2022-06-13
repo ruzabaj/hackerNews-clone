@@ -1,8 +1,9 @@
 import React from 'react'
 import "../../../scss/contents.scss";
-import Comment from '../Comment';
+import Comment from '../../comment/Comment';
 import { useState, useEffect } from "react";
 import {getTopStory} from '../../../axios/axios'
+import CommentList from '../../comment/CommentList';
 
 const Story = ({id ,sno}) => {
   const[topStory, setTopStory]=useState({});
@@ -16,7 +17,6 @@ const Story = ({id ,sno}) => {
     try {
       const response=await getTopStory(id);
       setTopStory(response.data)
-      console.log(response.data) 
       setChildren(response.data.kids)
     } catch (error) {
       console.log(error)
@@ -32,14 +32,14 @@ const Story = ({id ,sno}) => {
         </div>
         <div className="content-two">
           <a href="score">{JSON.stringify(topStory.score)}points by</a>
-          <span>
-            <a href="author">{JSON.stringify(topStory.by)}</a>
-          </span>
+          <a href="author">{JSON.stringify(topStory.by)}</a>
           <a href="time">{JSON.stringify(topStory.time)}hours ago</a>
           {children ?
-          <a href="children">{JSON.stringify(children)}</a>
-        :
-        <Comment/>
+          // {children.map ((i,index)=>(
+            <Comment i={id}/>
+            // ))}
+          :
+          <a href="children">no comment</a>
         }
         </div>
       </div>

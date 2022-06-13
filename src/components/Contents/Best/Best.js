@@ -15,8 +15,6 @@ const getBest=async()=>{
   try{
     const response=await getBestStories();
     setBestStories(response.data.slice(0,30))
-    console.log("from best")
-    console.log(response.data)
   }
   catch(error){
     console.log(error);

@@ -1,26 +1,26 @@
-import React from 'react'
+import React from "react";
 import "../../../scss/contents.scss";
-import {getBestStory} from '../../../axios/axios'
-import { useState, useEffect } from 'react';
+import Comment from "../../comment/Comment";
+import { getBestStory } from "../../../axios/axios";
+import { useState, useEffect } from "react";
 
-const BestNews = ({id, counter}) => {
-const [bestStory, setBestStory]= useState({});
-const [children, setChildren]=useState([]);
+const BestNews = ({ id, counter }) => {
+  const [bestStory, setBestStory] = useState({});
+  const [children, setChildren] = useState([]);
 
-useEffect(() => {
-  getBestNews()  
-}, []);
+  useEffect(() => {
+    getBestNews();
+  }, []);
 
-const getBestNews= async()=>{
-  try {
-    const response= await getBestStory(id);
-    setBestStory(response.data)
-    console.log("From Best News")
-    console.log(response.data.kids)
-    setChildren(response.data.kids)
-  } catch (error) {
-    console.log(error)
-  }}
+  const getBestNews = async () => {
+    try {
+      const response = await getBestStory(id);
+      setBestStory(response.data);
+      setChildren(response.data.kids);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="new-posts">
@@ -32,15 +32,13 @@ const getBestNews= async()=>{
         </div>
         <div className="content-two">
           <a href="score">{JSON.stringify(bestStory.score)}points by</a>
-          <span>
-            <a href="author">{JSON.stringify(bestStory.by)}</a>
-          </span>
+          <a href="author">{JSON.stringify(bestStory.by)}</a>
           <a href="time">{JSON.stringify(bestStory.time)}hours ago</a>
-          <a href="children">{JSON.stringify(children)}</a>
+          {children ? <Comment /> : <p>No children</p>}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default BestNews
+export default BestNews;
