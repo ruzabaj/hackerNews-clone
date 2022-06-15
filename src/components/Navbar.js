@@ -31,7 +31,6 @@ const Navbar = () => {
         </div>
       </div>
           <Routes/>
-      
     </div>
   );
 };

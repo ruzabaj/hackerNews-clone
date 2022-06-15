@@ -34,7 +34,7 @@ const BestNews = ({ id, counter }) => {
           <a href="score">{JSON.stringify(bestStory.score)}points by</a>
           <a href="author">{JSON.stringify(bestStory.by)}</a>
           <a href="time">{JSON.stringify(bestStory.time)}hours ago</a>
-          {children ? <Comment /> : <p>No children</p>}
+          {children ? <Comment /> : <p>No comment</p>}
         </div>
       </div>
     </div>

@@ -10,12 +10,12 @@ useEffect(()=>{
   getList();
 },[]);
 
+console.log("from comment", comment)
+
 const getList = async ()=>{
 try {
   const response=await getCommentList(id);
   setComment(response.data)
-  console.log("from comment")
-  console.log(response.data)
 } catch (error) {
   console.log(error)
 }
@@ -24,13 +24,11 @@ try {
   return (
     <div className="new-posts">
       <div className="contents">
-      {/* {comment.map((i,index)=> */}
-      {/* <CommentList id={i}/> */}
-(<a href="comment">Comment</a>)
-{comment}
- {/* )} */}
-</div>   
-</div>
+      {comment.map((item,index)=>
+        (<a href="comment">{item.text}</a>)
+        )}
+      </div>   
+    </div>
   );
 };
 
