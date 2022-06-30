@@ -1,11 +1,10 @@
 import React from 'react'
-import "../../../scss/contents.scss";
 import {Link} from 'react-router-dom';
 import { generatePath , useNavigate} from "react-router";
-import Comment from '../../comment/Comment';
+// import Comment from 'src/comment/Comment';
+// import CommentList from 'src/comment/CommentList';
 import { useState, useEffect } from "react";
-import {getTopStory} from '../../../axios/axios'
-import CommentList from '../../comment/CommentList';
+import {getStory} from 'src/services/Story'
 
 const Story = ({id ,sno}) => {
   const[topStory, setTopStory]=useState({});
@@ -17,7 +16,7 @@ const Story = ({id ,sno}) => {
 
   const getTopStoryList= async()=>{
     try {
-      const response=await getTopStory(id);
+      const response=await getStory(id);
       setTopStory(response.data)
       setChildren(response.data.kids)
     } catch (error) {
@@ -26,8 +25,8 @@ const Story = ({id ,sno}) => {
   }
 
   const path = '/comment/:id';
-  let navigate=useNavigate;
-  const onComment = (id) =>{
+  let navigate=useNavigate();
+  const onComment = () =>{
     const pathName= generatePath(path, {id});
     navigate(pathName);
   }
@@ -45,9 +44,6 @@ const Story = ({id ,sno}) => {
           <a href="author">{JSON.stringify(topStory.by)}</a>
           <a href="time">{JSON.stringify(topStory.time)}hours ago</a>
           {children?.length > 0 && <button onClick={onComment}><Link to="/comment/:id">Comment </Link></button>}
-          {/* {children &&
-            <Comment id={id}/>
-        } */}
         </div>
       </div>
     </div>

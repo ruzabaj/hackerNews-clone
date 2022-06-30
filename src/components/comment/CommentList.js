@@ -1,5 +1,5 @@
 import React from "react";
-import { getCommentList } from "../../axios/axios";
+import { getCommentList } from "src/services/Story";
 import { useState, useEffect } from "react";
 
 const CommentList = ({ id ,sno }) => {

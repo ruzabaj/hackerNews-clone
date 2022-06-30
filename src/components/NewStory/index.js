@@ -1,10 +1,8 @@
-import React from "react";
-import "../../../scss/contents.scss";
-import Story from "./NewStory";
-import { useState, useEffect } from "react";
-import { getNewStories } from "../../../axios/axios";
+import React ,{ useState, useEffect } from "react";
+import Story from "src/components/Story";
+import { getNewStories } from "src/services/Story";
 
-const New = () => {
+const NewStory = () => {
   const [newStories, setNewStories] = useState([]);
 
   useEffect(() => {
@@ -30,4 +28,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default NewStory;

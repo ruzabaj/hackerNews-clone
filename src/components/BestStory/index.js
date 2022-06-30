@@ -1,10 +1,8 @@
-import React from "react";
-import '../../../scss/contents.scss';
-import { useState, useEffect } from "react";
-import BestNews from "./BestNews";
-import { getBestStories} from "../../../axios/axios";
+import React, { useState, useEffect } from "react";
+import Story from "src/components/Story";
+import { getBestStories} from "src/services/Story";
 
-const Best = () => {
+const BestStory = () => {
 const [bestStories, setBestStories] = useState([]);
 
 useEffect(()=>{
@@ -24,11 +22,11 @@ const getBest=async()=>{
     <div className="new-posts">
         <div className="contents">
             {bestStories.map((i,index)=>
-              (<BestNews id={i} counter={index+1}/>)
+              (<Story id={i} sno={index+1}/>)
             )}
       </div>
     </div>
   );
 };
 
-export default Best;
+export default BestStory;
