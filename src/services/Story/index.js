@@ -10,6 +10,7 @@ export const getStory =async id=>{
     const result= await axios.get(`${storysUrl+id}.json`)
     return result
 }
+
 export const getNewStories = async () => {
     const result = await axios.get(newStoriesUrl)
     return result;
